@@ -30,26 +30,11 @@ install_git_app "$CHANGE_QUOTES_EXTENSION_URL" "$CHANGE_QUOTES_EXTENSION_PATH" "
 # Sublime Text - Color Highlighter
 install_git_app "$COLOR_HIGHLIGHTER_EXTENSION_URL" "$COLOR_HIGHLIGHTER_EXTENSION_PATH"
 
-# Sublime Text - CSScomb
-install_git_app "$CSSCOMB_EXTENSION_URL" "$CSSCOMB_EXTENSION_PATH"
-
-# Sublime Text - CTags
-install_git_app "$CTAGS_EXTENSION_URL" "$CTAGS_EXTENSION_PATH"
-
 # Sublime Text - DashDoc
 install_git_app "$DASH_DOC_EXTENSION_URL" "$DASH_DOC_EXTENSION_PATH"
 
 # Sublime Text - Easy Motion
 install_git_app "$EASY_MOTION_EXTENSION_URL" "$EASY_MOTION_EXTENSION_PATH" "$EASY_MOTION_EXTENSION_OPTIONS"
-
-# Sublime Text - Elm
-install_git_app "$ELM_EXTENSION_URL" "$ELM_EXTENSION_PATH"
-
-# Sublime Text - Emmet
-install_git_app "$EMMET_EXTENSION_URL" "$EMMET_EXTENSION_PATH"
-
-# Sublime Text - Emmet LiveStyle
-install_git_app "$EMMET_LIVE_STYLE_EXTENSION_URL" "$EMMET_LIVE_STYLE_EXTENSION_PATH"
 
 # Sublime Text - Gist
 install_git_app "$GIST_EXTENSION_URL" "$GIST_EXTENSION_PATH"
@@ -84,18 +69,6 @@ install_git_app "$MARKDOWN_EXTENSION_URL" "$MARKDOWN_EXTENSION_PATH"
 # Sublime Text - Move Tab
 install_git_app "$MOVE_TAB_EXTENSION_URL" "$MOVE_TAB_EXTENSION_PATH"
 
-# Sublime Text - Reek
-install_git_app "$REEK_EXTENSION_URL" "$REEK_EXTENSION_PATH"
-
-# Sublime Text - Rubocop
-install_git_app "$RUBOCOP_EXTENSION_URL" "$RUBOCOP_EXTENSION_PATH"
-
-# Sublime Text - Ruby Extract Method
-install_git_app "$RUBY_EXTRACT_METHOD_EXTENSION_URL" "$RUBY_EXTRACT_METHOD_EXTENSION_PATH"
-
-# Sublime Text - Ruby Slim
-install_git_app "$RUBY_SLIM_EXTENSION_URL" "$RUBY_SLIM_EXTENSION_PATH"
-
 # Sublime Text - SCSS
 install_git_app "$SCSS_EXTENSION_URL" "$SCSS_EXTENSION_PATH"
 
@@ -120,32 +93,14 @@ install_git_app "$WEB_INSPECTOR_EXTENSION_URL" "$WEB_INSPECTOR_EXTENSION_PATH"
 # Sublime Text - WrapPlus
 install_git_app "$WRAP_PLUS_EXTENSION_URL" "$WRAP_PLUS_EXTENSION_PATH"
 
-# Vim - Bundler
-install_git_app "$VIM_BUNDLER_EXTENSION_URL" "$VIM_BUNDLER_EXTENSION_PATH"
+# oh-my-fish
+curl -L https://get.oh-my.fish | fish
 
-# Vim - Commentary
-install_git_app "$VIM_COMMENTARY_EXTENSION_URL" "$VIM_COMMENTARY_EXTENSION_PATH"
+# omf theme chain
+omf install chain
 
-# Vim - Fugitive
-install_git_app "$VIM_FUGITIVE_EXTENSION_URL" "$VIM_FUGITIVE_EXTENSION_PATH"
+# omf sublime plugin
+omf install sublime
 
-# Vim - Git Gutter
-install_git_app "$VIM_GIT_GUTTER_EXTENSION_URL" "$VIM_GIT_GUTTER_EXTENSION_PATH"
-
-# Vim - Pathogen
-install_file "$VIM_PATHOGEN_EXTENSION_URL" "$VIM_PATHOGEN_EXTENSION_PATH"
-
-# Vim - Rails
-install_git_app "$VIM_RAILS_EXTENSION_URL" "$VIM_RAILS_EXTENSION_PATH"
-
-# Vim - Ruby
-install_git_app "$VIM_RUBY_EXTENSION_URL" "$VIM_RUBY_EXTENSION_PATH"
-
-# Vim - Text Object
-install_git_app "$VIM_TEXT_OBJECT_EXTENSION_URL" "$VIM_TEXT_OBJECT_EXTENSION_PATH"
-
-# Vim - Text Object Ruby Block
-install_git_app "$VIM_TEXT_OBJECT_RUBY_BLOCK_EXTENSION_URL" "$VIM_TEXT_OBJECT_RUBY_BLOCK_EXTENSION_PATH"
-
-# Vim - Unimpaired
-install_git_app "$VIM_UNIMPAIRED_EXTENSION_URL" "$VIM_UNIMPAIRED_EXTENSION_PATH"
+# omf OSX plugins
+omf install osx

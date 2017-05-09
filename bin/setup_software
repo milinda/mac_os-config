@@ -4,10 +4,10 @@
 # Sets up and launches (if necessary) installed software.
 
 # Bash
-sudo bash -c "printf '/usr/local/bin/bash\n' >> /etc/shells"
+sudo bash -c "printf '/usr/local/bin/fish\n' >> /etc/shells"
 
 # Bash Completion
-chsh -s /usr/local/bin/bash
+chsh -s /usr/local/bin/fish
 
 # Homebrew
 (
@@ -15,32 +15,24 @@ chsh -s /usr/local/bin/bash
   git config --local core.hooksPath /dev/null
 )
 
-# Ruby
-printf "%s\n" "---" > "$HOME/.gemrc"
-printf "%s\n" "gem: --no-document" >> "$HOME/.gemrc"
-printf "%s\n" "$MRI" > "$HOME/.ruby-version"
-git clone https://github.com/bkuhlmann/ruby_setup.git
-(
-  cd ruby_setup
-  git checkout $REPO_RUBY_SETUP
-  /usr/local/bin/ruby-install "ruby-$MRI"
-  bin/run i
-)
-rm -rf ruby_setup
-
-# Yarn
-install_git_project "https://github.com/bkuhlmann/yarn_setup.git" $REPO_YARN_SETUP "yarn_setup" "bin/run i"
-
-# Go
-install_git_project "https://github.com/bkuhlmann/go_setup.git" $REPO_GO_SETUP "go_setup" "bin/run i"
-
 # Sublime Text Setup
-if [ ! -e "/usr/bin/sublime" ]; then
-  sudo ln -sv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
-fi
-install_git_project "https://github.com/bkuhlmann/sublime_text_setup.git" $REPO_SUBLIME_TEXT_SETUP "sublime_text_setup" "bin/run i"
+cp "$MAC_OS_CONFIG_PATH/lib/config/sublime/Preferences.sublime-settings" "$SUBLIME_TEXT_EXTENSION_ROOT/User"
 
-# Dotfiles
-rm -f $HOME/.bash_profile
-install_git_project "https://github.com/bkuhlmann/dotfiles.git" $REPO_DOTFILES "dotfiles" "bin/run i"
-source $HOME/.bashrc
+# Omf Setup
+mkdir -p "$HOME/.config/omf"
+cp "$MAC_OS_CONFIG_PATH/lib/config/omf/init.fish" 
+
+pip install --upgrade setuptools
+pip install --upgrade pip
+pip install numpy --user
+pip install scipy --user
+sudo pip install matplotlib --user
+sudo pip install -U scikit-learn --user
+sudo pip install pandas --user
+npm install webpack -g
+
+# iTerm2
+mkdir -p $ITERM2_POFILE_PATH
+cp "$MAC_OS_CONFIG_PATH/lib/config/iterm2/default.profile" $ITERM2_POFILE_PATH
+
+mkdir -p /Users/mpathira/Workspace
