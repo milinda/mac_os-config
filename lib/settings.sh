@@ -112,7 +112,7 @@ export WEB_INSPECTOR_EXTENSION_URL="https://github.com/sokolovstas/SublimeWebIns
 export WRAP_PLUS_EXTENSION_PATH="$SUBLIME_TEXT_EXTENSION_ROOT/WrapPlus"
 export WRAP_PLUS_EXTENSION_URL="https://github.com/ehuss/Sublime-Wrap-Plus.git"
 export AYU_THEME_PATH="$SUBLIME_TEXT_EXTENSION_ROOT/ayu"
-export AYU_THEME="https://github.com/dempfi/ayu.git"
+export AYU_THEME_URL="https://github.com/dempfi/ayu.git"
 
 export VIM_EXTENSION_ROOT="$HOME/.vim/bundle"
 export VIM_BUNDLER_EXTENSION_PATH="$VIM_EXTENSION_ROOT/vim-bundler"

@@ -93,6 +93,9 @@ install_git_app "$WEB_INSPECTOR_EXTENSION_URL" "$WEB_INSPECTOR_EXTENSION_PATH"
 # Sublime Text - WrapPlus
 install_git_app "$WRAP_PLUS_EXTENSION_URL" "$WRAP_PLUS_EXTENSION_PATH"
 
+# sublime Text - Ayu Theme
+install_git_app "$AYU_THEME_URL" "$AYU_THEME_PATH"
+
 # oh-my-fish
 curl -L https://get.oh-my.fish | fish
 
